@@ -1,27 +1,35 @@
-import * as S from './styles'
+import * as S from "./styles";
+import config from "../../config.json";
 
-function Timeline(props) {
+function Timeline({ searchValue, ...props }) {
   const playlistNames = Object.keys(props.playlists);
   return (
     <S.StyledTimeline>
+      {" "}
       {playlistNames.map((playlistName) => {
         const videos = props.playlists[playlistName];
         return (
-          <section>
-            <h2>{playlistName}</h2>
+          <section key={playlistName}>
+            <h2> {playlistName} </h2>{" "}
             <div>
-              {videos.map((video) => {
-                return (
-                  <a href={video.url}>
-                    <img src={video.thumb} />
-                    <span>{video.title}</span>
-                  </a>
-                );
-              })}
-            </div>
+              {" "}
+              {videos
+                .filter((video) => {
+                  const titleNormalized = video.title?.toLowerCase();
+                  const searchValueNormalized = searchValue?.toLowerCase();
+                  return titleNormalized?.includes(searchValueNormalized);
+                })
+                .map((video) => {
+                  return (
+                    <a key={video.url} href={video.url} target="_blank">
+                      <img src={video.thumb} /> <span> {video.title} </span>{" "}
+                    </a>
+                  );
+                })}{" "}
+            </div>{" "}
           </section>
         );
-      })}
+      })}{" "}
     </S.StyledTimeline>
   );
 }

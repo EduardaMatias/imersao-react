@@ -3,10 +3,18 @@ import Menu from "../components/Menu";
 import Timeline from "../components/Timeline";
 import config from "../config.json";
 import { CSSReset } from "../globals";
+import { useState } from "react";
+import Head from "next/head";
+
+const initialValue = "";
 
 function HomePage() {
+  const [valorDoFiltro, setValorDoFiltro] = useState(initialValue);
   return (
     <>
+      <Head>
+        <title> AluraTube </title>{" "}
+      </Head>{" "}
       <CSSReset />
       <div
         style={{
@@ -15,10 +23,9 @@ function HomePage() {
           flex: 1,
         }}
       >
-        <Menu />
-        <Header />
-        <Timeline playlists={config.playlists} />{" "}
-      </div>
+        <Menu valorDoFiltro={valorDoFiltro} setValorDoFiltro={setValorDoFiltro} /> <Header />
+        <Timeline searchValue={valorDoFiltro} playlists={config.playlists} />{" "}
+      </div>{" "}
     </>
   );
 }
