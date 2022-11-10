@@ -1,4 +1,5 @@
 import Search from "../Search";
+import SwitchDarkMode from "../SwitchDarkMode";
 import * as S from "./styles";
 
 function Menu({ valorDoFiltro, setValorDoFiltro }) {
@@ -8,6 +9,7 @@ function Menu({ valorDoFiltro, setValorDoFiltro }) {
         <Logo />
       </div>
       <Search valorDoFiltro={valorDoFiltro} setValorDoFiltro={setValorDoFiltro} />
+      <SwitchDarkMode />
     </S.StyledMenu>
   );
 }

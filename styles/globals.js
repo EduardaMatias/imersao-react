@@ -9,6 +9,8 @@ export const CSSReset = createGlobalStyle`
   }
   body {
     font-family: sans-serif;
+    background-color: ${({ theme }) => theme.backgroundBase || "#FFFFFF"};
+    color: ${({ theme }) => theme.textColorBase || "#FFFFFF"};
   }
   /* NextJS */
   html {
@@ -47,7 +49,7 @@ export const CSSReset = createGlobalStyle`
   }
 
   *::-webkit-scrollbar-thumb {
-    background-color: #e4e4e4;
+    background-color: ${({ theme }) => theme.backgroundLevel2 || "#FFFFFF"};
     border-radius: 20px;
   }
 `;

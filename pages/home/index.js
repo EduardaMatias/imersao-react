@@ -1,8 +1,8 @@
-import Header from "../components/Header";
-import Menu from "../components/Menu";
-import Timeline from "../components/Timeline";
-import config from "../config.json";
-import { CSSReset } from "../globals";
+import Header from "../../components/Header";
+import Menu from "../../components/Menu";
+import Timeline from "../../components/Timeline";
+import config from "../../config.json";
+import { CSSReset } from "../../styles/globals";
 import { useState } from "react";
 import Head from "next/head";
 
