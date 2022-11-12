@@ -13,8 +13,8 @@ function HomePage() {
   return (
     <>
       <Head>
-        <title> AluraTube </title>{" "}
-      </Head>{" "}
+        <title> AluraTube </title> 
+      </Head> 
       <CSSReset />
       <div
         style={{
@@ -24,8 +24,8 @@ function HomePage() {
         }}
       >
         <Menu valorDoFiltro={valorDoFiltro} setValorDoFiltro={setValorDoFiltro} /> <Header />
-        <Timeline searchValue={valorDoFiltro} playlists={config.playlists} />{" "}
-      </div>{" "}
+        <Timeline searchValue={valorDoFiltro} playlists={config.playlists} /> 
+      </div> 
     </>
   );
 }
