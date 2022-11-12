@@ -6,8 +6,6 @@ Projeto desenvolvido durante a imersão react, evento realizado pela Alura.
 
 Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
 
-Consulte Implantação para saber como implantar o projeto.
-
 # 📋 Pré-requisitos
 
 De que coisas você precisa para instalar o software e como instalá-lo?
@@ -20,7 +18,7 @@ De que coisas você precisa para instalar o software e como instalá-lo?
 2. Escolha seu sistema operacional e realize o processo de instalação
 3. Vá até o terminal de sua escolha (cmd, bash etc) e digite os seguintes comandos: 
 
-`npm -v`
+`npm -v` <br>
 `node -v`
 
 4. Caso não retorne a versão do node ou npm, volte para o passo 1
